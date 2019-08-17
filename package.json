@@ -1,0 +1,37 @@
+{
+  "name": "@nadameu/pipe",
+  "version": "2.0.0",
+  "description": "Function that pipes sequential operations, given an initial value.",
+  "type": "commonjs",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "module": "lib/index.mjs",
+  "files": [
+    "lib/**/*"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "clean": "rimraf lib",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadameu/pipe.git"
+  },
+  "keywords": [
+    "pipe",
+    "typescript"
+  ],
+  "author": "nadameu",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/nadameu/pipe/issues"
+  },
+  "homepage": "https://github.com/nadameu/pipe#readme",
+  "devDependencies": {
+    "rimraf": "^2.6.3",
+    "rollup": "^1.18.0",
+    "rollup-plugin-typescript2": "^0.22.1",
+    "typescript": "^3.5.3"
+  }
+}
