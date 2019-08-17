@@ -1,37 +1,38 @@
 {
-  "name": "@nadameu/pipe",
-  "version": "2.0.0",
-  "description": "Function that pipes sequential operations, given an initial value.",
-  "type": "commonjs",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
-  "module": "lib/index.mjs",
+  "name": "to-apply",
+  "version": "0.1.0",
+  "description": "to(obj).apply(fn1, fn2, fn3, ...);",
+  "main": "lib/cjs/index.js",
+  "types": "lib/esm/index.d.ts",
+  "module": "lib/esm/index.js",
   "files": [
-    "lib/**/*"
+    "lib"
   ],
   "scripts": {
-    "build": "rollup -c",
+    "build-cjs": "tsc -p tsconfig-cjs.json",
+    "build-esm": "tsc -p tsconfig-esm.json",
+    "build": "npm run build-cjs && npm run build-esm",
     "clean": "rimraf lib",
-    "prepublish": "npm run clean && npm run build"
+    "prepare": "npm run clean && npm run build && npm run prettify",
+    "prettify": "prettier --write \"**/*.js\" \"**/*.ts\"",
+    "type-check": "tsc"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nadameu/pipe.git"
+    "url": "git+https://github.com/nadameu/to-apply.git"
   },
   "keywords": [
-    "pipe",
     "typescript"
   ],
   "author": "nadameu",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/nadameu/pipe/issues"
+    "url": "https://github.com/nadameu/to-apply/issues"
   },
-  "homepage": "https://github.com/nadameu/pipe#readme",
+  "homepage": "https://github.com/nadameu/to-apply#readme",
   "devDependencies": {
-    "rimraf": "^2.6.3",
-    "rollup": "^1.18.0",
-    "rollup-plugin-typescript2": "^0.22.1",
+    "prettier": "^1.18.2",
+    "rimraf": "^2.7.1",
     "typescript": "^3.5.3"
   }
 }
