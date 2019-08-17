@@ -2,34 +2,34 @@
   "name": "to-apply",
   "version": "0.1.0",
   "description": "to(obj).apply(fn1, fn2, fn3, ...);",
-  "main": "lib/cjs/index.js",
-  "types": "lib/esm/index.d.ts",
-  "module": "lib/esm/index.js",
-  "files": [
-    "lib"
+  "keywords": [
+    "typescript"
   ],
-  "scripts": {
-    "build-cjs": "tsc -p tsconfig-cjs.json",
-    "build-esm": "tsc -p tsconfig-esm.json",
-    "build": "npm run build-cjs && npm run build-esm",
-    "clean": "rimraf lib",
-    "prepare": "npm run clean && npm run build && npm run prettify",
-    "prettify": "prettier --write \"**/*.js\" \"**/*.ts\"",
-    "type-check": "tsc"
+  "homepage": "https://github.com/nadameu/to-apply#readme",
+  "bugs": {
+    "url": "https://github.com/nadameu/to-apply/issues"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nadameu/to-apply.git"
   },
-  "keywords": [
-    "typescript"
-  ],
-  "author": "nadameu",
   "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/nadameu/to-apply/issues"
+  "author": "nadameu",
+  "files": [
+    "lib"
+  ],
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/esm/index.d.ts",
+  "scripts": {
+    "build": "npm run build-cjs && npm run build-esm",
+    "build-cjs": "tsc -p tsconfig-cjs.json",
+    "build-esm": "tsc -p tsconfig-esm.json",
+    "clean": "rimraf lib",
+    "prepare": "npm run clean && npm run build && npm run prettify",
+    "prettify": "prettier --write \"**/*.js\" \"**/*.ts\"",
+    "type-check": "tsc"
   },
-  "homepage": "https://github.com/nadameu/to-apply#readme",
   "devDependencies": {
     "prettier": "^1.18.2",
     "rimraf": "^2.7.1",
